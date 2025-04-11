@@ -16,6 +16,12 @@ void draw_user_main()
     
 //catalog
   setfillstyle(1,LIGHTGRAY);setlinestyle(0,0,3);bar(81,201,558,459);rectangle(80,200,559,460);
+  setlinestyle(0,0,2);
+  bar(520,150,560,180);rectangle(520,150,560,180);
+  outtextxy(525,162,"TAGS");outtextxy(133,210,"ISBN");outtextxy(300,210,"TITLE");outtextxy(464,210,"STATUS");
+  line(220,200,220,460);line(420,200,420,460);
+  line(80,225,560,225);
+  
 }
 
-#endf
+#endif
