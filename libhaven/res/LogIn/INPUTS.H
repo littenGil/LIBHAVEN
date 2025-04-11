@@ -5,7 +5,7 @@ void login_getusername(char username[36])
 {
 //get user input
   hidemouse();setfillstyle(1, WHITE);bar(160, 191, 478, 209);
-  moveto(180,198);inputnumtext(username, 35);
+  moveto(180,198);inputtext(username, 35);
 //close user input
   setfillstyle(1, LIGHTGRAY);bar(160, 191, 478, 209);
   outtextxy(180,198, username);

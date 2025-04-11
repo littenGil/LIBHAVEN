@@ -4,14 +4,13 @@
 void draw_bootup()
 {
 //set variables
-  cleardevice();
   int i = 190;
   int book1[] = {170, 240, 80, 215, 170, 190, 170, 240};
   int book2[] = {170, 220, 90, 200, 170, 170, 170, 220};
   int book3[] = {170, 204, 96, 186, 170, 150, 170, 204};
-
+  
 //draw blue bar
-  setfillstyle(1, BLUE);setcolor(BLUE);bar(175, 125, 180, 255);
+  cleardevice();setfillstyle(1, BLUE);setcolor(BLUE);bar(175, 125, 180, 255);
  
 //draw blue book
   fillpoly(4, book1);setfillstyle(1, BLACK);bar(80, 210, 100, 220);

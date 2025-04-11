@@ -24,8 +24,8 @@ int inputtext(char *string, int limit)   //use in place of scanf and gets for st
 //scan Password
 int inputpassword(char *string, int limit)   //like inputtext() but with privacy protection
 {
- int i = strlen(string);
- for(int j = 0; j < i; j++){outtext("*");}
+ int j,i = strlen(string);
+ for( j = 0; j < i; j++){outtext("*");}
  char key;  
    while(1){
      if(kbhit()){

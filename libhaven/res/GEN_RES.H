@@ -16,10 +16,9 @@ char booklistfile[] = "c:/libhaven/books/list.txt";
 
 int checkfiles()
 {
+   FILE *userlist = fopen(userlistfile, "r");FILE *booklist = fopen(booklistfile, "r");
    settextstyle(0,0,1);
-   FILE *userlist = fopen(userlistfile, "r");
-   if (userlist == NULL){setcolor(RED);outtext("record of users not found");setcolor(BLACK);moveto(0,gety()+20);};
-   FILE *booklist = fopen(booklistfile, "r");
+   if (userlist == NULL){setcolor(RED);outtext("record of users not found");setcolor(BLACK);moveto(0,gety()+20);}; 
    if (booklist == NULL){setcolor(RED);outtext("record of books not found");setcolor(BLACK);moveto(0,gety()+20);};
    return 0;
 }
