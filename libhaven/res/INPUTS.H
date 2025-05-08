@@ -136,9 +136,13 @@ int checksubstring(char string1[], char string2[]) {
 void updateDate()
 {
     struct date datetoday;
+    struct time timenow;
+    char time[]="AM";
     char months[12][10] = {"JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE","JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"};
     getdate(&datetoday);
-    sprintf(currDate, "%s %d, %d", months[datetoday.da_mon - 1], datetoday.da_day, datetoday.da_year);
+    gettime(&timenow);
+    if(timenow.ti_hour>12){strcpy(time,"PM");}
+    sprintf(currDate, "%s %d, %d | (%d:%d %s)", months[datetoday.da_mon - 1], datetoday.da_day, datetoday.da_year, timenow.ti_hour%12, timenow.ti_min,time);
 }
 
 #endif

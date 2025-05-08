@@ -21,12 +21,7 @@ int updatecatalog(int offset, int *nbooks, char catalog[12][7], char search[35])
       book = fopen(bookpath, "r");
       fscanf(book, " %35s", title);
       fclose(book);
-      memset(borrower,0,sizeof(borrower));
-      sprintf(bookpath, "c:/libhaven/borrowed/%s.txt", bookid);
-      book = fopen(bookpath, "r");
-      fscanf(book, " %35[^\n]s", borrower);
-      fclose(book);
-      if (!checksubstring(bookid, bookSearch) || !checksubstring(title, bookSearch)||!checksubstring(borrower, bookSearch)){i--;continue;};
+      if (!checksubstring(bookid, bookSearch) || !checksubstring(title, bookSearch)){i--;continue;};
       sprintf(bookpath, "c:/libhaven/lost/%s.txt", bookid);
       book = fopen(bookpath, "r");
       fscanf(book, " %35[^\n]s", title);
